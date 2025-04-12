@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass - Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="auth-section">
+        <div class="container">
+            <h2>Login</h2>
+            <form class="auth-form" method="post" action="/login">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+            </form>
+        </div>
+    </section>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

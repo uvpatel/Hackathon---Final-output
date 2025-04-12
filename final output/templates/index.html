@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass - Your AI Career Advisor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Career Compass</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact Us</a>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Career Path</h1>
+                <p>Get personalized career suggestions powered by AI</p>
+                <a href="#skills" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="/static/images/hero-career.jpg" alt="Career Guidance">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Skill Assessment</h3>
+                    <p>Rate your technical and soft skills to get accurate career matches</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Job Matching</h3>
+                    <p>Find jobs that match your skills and interests</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Career Advisor</h3>
+                    <p>Get personalized career advice from our AI assistant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Career Compass is dedicated to helping individuals navigate their career journeys with confidence. Our AI-powered platform provides personalized guidance, skill assessments, and job matching to empower you to achieve your professional goals.</p>
+                    <p>Founded in 2025, our mission is to bridge the gap between talent and opportunity using cutting-edge technology.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/static/images/about-us.jpg" alt="About Career Compass">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Assessment Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="skills-header">
+                <h1>Skills Assessment</h1>
+                <p>Rate your skills to get personalized career suggestions</p>
+            </div>
+            <form id="skills-form" class="skills-form">
+                <section class="skills-section">
+                    <h2>Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <label>Programming</label>
+                            <div class="rating">
+                                <input type="radio" name="programming" value="5" id="prog5"><label for="prog5">5</label>
+                                <input type="radio" name="programming" value="4" id="prog4"><label for="prog4">4</label>
+                                <input type="radio" name="programming" value="3" id="prog3"><label for="prog3">3</label>
+                                <input type="radio" name="programming" value="2" id="prog2"><label for="prog2">2</label>
+                                <input type="radio" name="programming" value="1" id="prog1"><label for="prog1">1</label>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <label>Data Analysis</label>
+                            <div class="rating">
+                                <input type="radio" name="data_analysis" value="5" id="da5"><label for="da5">5</label>
+                                <input type="radio" name="data_analysis" value="4" id="da4"><label for="da4">4</label>
+                                <input type="radio" name="data_analysis" value="3" id="da3"><label for="da3">3</label>
+                                <input type="radio" name="data_analysis" value="2" id="da2"><label for="da2">2</label>
+                                <input type="radio" name="data_analysis" value="1" id="da1"><label for="da1">1</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="skills-section">
+                    <h2>Soft Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <label>Communication</label>
+                            <div class="rating">
+                                <input type="radio" name="communication" value="5" id="comm5"><label for="comm5">5</label>
+                                <input type="radio" name="communication" value="4" id="comm4"><label for="comm4">4</label>
+                                <input type="radio" name="communication" value="3" id="comm3"><label for="comm3">3</label>
+                                <input type="radio" name="communication" value="2" id="comm2"><label for="comm2">2</label>
+                                <input type="radio" name="communication" value="1" id="comm1"><label for="comm1">1</label>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <label>Leadership</label>
+                            <div class="rating">
+                                <input type="radio" name="leadership" value="5" id="lead5"><label for="lead5">5</label>
+                                <input type="radio" name="leadership" value="4" id="lead4"><label for="lead4">4</label>
+                                <input type="radio" name="leadership" value="3" id="lead3"><label for="lead3">3</label>
+                                <input type="radio" name="leadership" value="2" id="lead2"><label for="lead2">2</label>
+                                <input type="radio" name="leadership" value="1" id="lead1"><label for="lead1">1</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="additional-info">
+                    <h2>Additional Information</h2>
+                    <div class="form-group">
+                        <label for="education">Education Level</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select your education level</option>
+                            <option value="high_school">High School</option>
+                            <option value="bachelors">Bachelor's Degree</option>
+                            <option value="masters">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Career Interests</label>
+                        <textarea id="interests" name="interests" placeholder="Describe your career interests..." required></textarea>
+                    </div>
+                </section>
+                <button type="submit" class="btn btn-primary btn-block">Get Career Suggestions</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Career Compass helped me find my dream job in tech!"</p>
+                    <div class="testimonial-author">
+                        <img src="/static/images/testimonial-user.jpg" alt="User Testimonial">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>Have questions or need assistance? Reach out to us!</p>
+                    <p>Email: <a href="mailto:support@careercompass.com">support@careercompass.com</a></p>
+                    <p>Phone: +1-800-CAREER1</p>
+                </div>
+                <div class="contact-image">
+                    <img src="/static/images/contact-us.jpg" alt="Contact Us">
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Career Compass</h3>
+                    <p>Your AI-powered career advisor</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:support@careercompass.com">support@careercompass.com</a></p>
+                    <p>Phone: +1-800-CAREER1</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Career Compass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> AI Career Advisor</h3>
+            <button class="close-chatbot"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-body">
+            <div class="chat-message bot-message">
+                <div class="message-content">
+                    Hello! I'm your AI Career Advisor. Ask me about careers, skills, or try the skills assessment above!
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Ask about your career...">
+            <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
