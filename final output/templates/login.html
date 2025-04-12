@@ -3,29 +3,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Compass - Login</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Login - Career Compass</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            width: 1000px;
+            max-width: 100%;
+            min-height: 700px;
+            display: flex;
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-container h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .form-container span {
+            color: #7f8c8d;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icons a {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .social-icons a.google:hover {
+            background: #DB4437;
+            color: white;
+        }
+
+        .social-icons a.facebook:hover {
+            background: #4267B2;
+            color: white;
+        }
+
+        .social-icons a.linkedin:hover {
+            background: #0077B5;
+            color: white;
+        }
+
+        .input-field {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .input-field input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            background: white;
+        }
+
+        .input-field .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            position: absolute;
+            bottom: -1.2rem;
+            left: 0;
+        }
+
+        .input-field input.error {
+            border-color: #e74c3c;
+            background-color: #fff5f5;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            border: 2px solid #e0e0e0;
+            cursor: pointer;
+        }
+
+        .remember-me label {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .forgot-password:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        button {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .signup-link {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        .signup-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot {
+            width: 350px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot.active {
+            transform: translateY(0);
+        }
+
+        .chatbot-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chatbot-header h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chatbot-header h3::before {
+            content: '🤖';
+            font-size: 1.4rem;
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatbot-body {
+            padding: 1.5rem;
+            height: 400px;
+            overflow-y: auto;
+            background: #fff;
+        }
+
+        .features-list {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .features-list h4 {
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list h4::before {
+            content: '🤖';
+            font-size: 1.2rem;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            color: #4a5568;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .message-content {
+            max-width: 85%;
+            padding: 1rem 1.2rem;
+            border-radius: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .chatbot-input {
+            padding: 1rem;
+            background: #fff;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            outline: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .chatbot-input input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .chatbot-input button {
+            background: #3498db;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .chatbot-input button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .chatbot-input button i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .form-container {
+                padding: 2rem;
+            }
+
+            .social-icons a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .chatbot {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section class="auth-section">
-        <div class="container">
-            <h2>Login</h2>
-            <form class="auth-form" method="post" action="/login">
-                
-                <div class="form-group">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" name="email" required>
+    <div class="container">
+        <div class="form-container">
+            <h1>Welcome Back</h1>
+            <span>Sign in to continue your career journey</span>
+            <div class="social-icons">
+                <a href="#" class="google"><i class="fab fa-google"></i></a>
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <span class="error-message"></span>
                 </div>
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" name="password" required>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="error-message"></span>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
-                <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit">Sign In</button>
             </form>
+            <div class="signup-link">
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </div>
         </div>
-    </section>
-    <script src="script.js"></script>
+    </div>
+
+    <div class="chatbot-container">
+        <div class="chatbot" id="chatbot">
+            <div class="chatbot-header">
+                <h3>AI Career Advisor</h3>
+                <button class="close-btn" id="closeChatbot">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="chatbot-body" id="chatbotBody">
+                <div class="features-list">
+                    <h4>AI Career Advisor</h4>
+                    <ul>
+                        <li>Personalized career suggestions based on your skills</li>
+                        <li>Comprehensive skills assessment and guidance</li>
+                        <li>Educational pathway recommendations</li>
+                        <li>Real-time industry insights and trends</li>
+                    </ul>
+                </div>
+                <div class="message bot">
+                    <div class="message-content">
+                        Hello! I'm your AI Career Advisor. How can I help you with your career journey today?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/chatbot.js"></script>
+    <script>
+        const loginForm = document.getElementById("loginForm");
+
+        // Form validation functions
+        function showError(input, message) {
+            const errorSpan = input.nextElementSibling;
+            errorSpan.textContent = message;
+            input.classList.add('error');
+        }
+
+        function clearError(input) {
+            const errorSpan = input.nextElementSibling;
+            errorSpan.textContent = '';
+            input.classList.remove('error');
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Login form validation
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                // Validate Email
+                const email = document.getElementById('email');
+                if (!email.value.trim()) {
+                    showError(email, 'Email is required');
+                    isValid = false;
+                } else if (!validateEmail(email.value)) {
+                    showError(email, 'Please enter a valid email');
+                    isValid = false;
+                } else {
+                    clearError(email);
+                }
+
+                // Validate Password
+                const password = document.getElementById('password');
+                if (!password.value) {
+                    showError(password, 'Password is required');
+                    isValid = false;
+                } else {
+                    clearError(password);
+                }
+
+                if (isValid) {
+                    // Here you would typically send the login data to your server
+                    console.log('Form submitted successfully');
+                    
+                    // For demo purposes, just clear the form
+                    loginForm.reset();
+                    
+                    // Show success message
+                    alert('Login successful!');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
