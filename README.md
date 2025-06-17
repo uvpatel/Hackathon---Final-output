@@ -27,8 +27,8 @@ We developed an intelligent virtual advisor that:
 - *Frontend:* React / HTML / CSS
 - *Backend:* Python (Flask / FastAPI)
 - *AI/ML:* OpenAI GPT API / Custom ML models
-- *Database:* MongoDB / Firebase
-- *Others:* Git, GitHub, Postman
+- *Database:* MongoDB 
+- *Others:* Git, GitHub
 
 ## 🏗 Architecture
 
