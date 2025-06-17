@@ -41,3 +41,8 @@ git clone https://github.com/uvpatel/Hackathon---Final-output.git
 cd Hackathon---Final-output
 pip install -r requirements.txt
 python app.py
+```
+
+## Further Improvements
+- Resume Analyser and using AI Models Rather than API keys
+
